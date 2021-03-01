@@ -1,0 +1,193 @@
+[2021-03-01 13:19:00] development.DEBUG: dir created  
+[2021-03-01 13:19:00] development.DEBUG: dir created  
+[2021-03-01 13:19:00] development.DEBUG: dir created  
+[2021-03-01 13:19:00] development.DEBUG: dir created  
+[2021-03-01 13:27:32] development.DEBUG: dir created  
+[2021-03-01 13:27:32] development.DEBUG: dir created  
+[2021-03-01 13:27:32] development.DEBUG: dir created  
+[2021-03-01 13:27:32] development.DEBUG: dir created  
+[2021-03-01 13:28:11] development.DEBUG: dir created  
+[2021-03-01 13:28:11] development.DEBUG: dir created  
+[2021-03-01 13:28:11] development.DEBUG: dir created  
+[2021-03-01 13:28:11] development.DEBUG: dir created  
+[2021-03-01 13:35:11] development.DEBUG: dir created  
+[2021-03-01 13:35:12] development.DEBUG: dir created  
+[2021-03-01 13:35:12] development.DEBUG: dir created  
+[2021-03-01 13:35:12] development.DEBUG: dir created  
+[2021-03-01 13:35:56] development.DEBUG: dir created  
+[2021-03-01 13:35:56] development.DEBUG: dir created  
+[2021-03-01 13:35:56] development.DEBUG: dir created  
+[2021-03-01 13:35:56] development.DEBUG: dir created  
+[2021-03-01 13:36:17] development.DEBUG: dir created  
+[2021-03-01 13:36:17] development.DEBUG: dir created  
+[2021-03-01 13:36:17] development.DEBUG: dir created  
+[2021-03-01 13:36:17] development.DEBUG: dir created  
+[2021-03-01 13:40:27] development.DEBUG: dir created  
+[2021-03-01 13:40:27] development.DEBUG: dir created  
+[2021-03-01 13:40:27] development.DEBUG: dir created  
+[2021-03-01 13:40:27] development.DEBUG: dir created  
+[2021-03-01 14:04:01] development.INFO: Create applied folder {"applied":"20170908"} 
+[2021-03-01 14:04:01] development.INFO: Create applied folder {"applied":"20171010"} 
+[2021-03-01 14:04:01] development.INFO: Create applied folder {"applied":"20180909"} 
+[2021-03-01 14:04:01] development.INFO: Create applied folder {"applied":"20200909"} 
+[2021-03-01 14:04:43] development.INFO: Create applied folder {"applied":"20170908"} 
+[2021-03-01 14:04:43] development.INFO: Create applied folder {"applied":"20171010"} 
+[2021-03-01 14:07:05] development.INFO: Create applied folder {"applied":"20170908"} 
+[2021-03-01 14:07:05] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 14:07:05] development.INFO: Create applied folder {"applied":"20171010"} 
+[2021-03-01 14:07:05] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 14:11:33] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171011.sql"} 
+[2021-03-01 14:11:33] development.ERROR: Rollback transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171011.sql"} 
+[2021-03-01 14:11:33] development.ERROR: Error occurred whilst execute SQL from /Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171011.sql: SQLSTATE[HY000]: General error: 1 table ERROR already exists (SQL: -- Start of content /Users/dostrog/projects/preskok/sqled/assets/change/change_20171011_e.sql
+DROP TABLE IF EXISTS ERROR;
+CREATE TABLE ERROR(
+                              ID INT PRIMARY KEY     NOT NULL,
+                              NAME           TEXT    NOT NULL,
+                              AGE            INT     NOT NULL,
+                              ADDRESS        CHAR(50),
+                              SALARY         REAL
+      );
+
+CREATE TABLE ERROR(
+                                     ID INT PRIMARY KEY      NOT NULL,
+                                     DEPT           CHAR(50) NOT NULL,
+                                     EMP_ID         INT      NOT NULL
+      );
+-- End of content /Users/dostrog/projects/preskok/sqled/assets/change/change_20171011_e.sql
+)  
+[2021-03-01 14:12:45] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171011.sql"} 
+[2021-03-01 14:12:45] development.ERROR: Rollback transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171011.sql"} 
+[2021-03-01 14:12:45] development.ERROR: Error occurred whilst execute SQL from /Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171011.sql   
+[2021-03-01 14:14:51] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171011.sql"} 
+[2021-03-01 14:14:51] development.ERROR: Rollback transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171011.sql"} 
+[2021-03-01 14:14:51] development.ERROR: Error occurred whilst execute SQL from /Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171011.sql   
+[2021-03-01 14:14:55] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 14:14:55] development.INFO: Run SQL from bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 14:14:55] development.INFO: Commit transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 14:14:55] development.INFO: Create applied folder {"applied":"20170908"} 
+[2021-03-01 14:14:55] development.INFO: Move files to bundle.  
+[2021-03-01 14:14:55] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 14:14:55] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 14:14:55] development.INFO: Run SQL from bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 14:14:55] development.INFO: Commit transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 14:14:55] development.INFO: Create applied folder {"applied":"20171010"} 
+[2021-03-01 14:14:55] development.INFO: Move files to bundle.  
+[2021-03-01 14:14:55] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 14:14:55] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20180909.sql"} 
+[2021-03-01 14:14:55] development.INFO: Run SQL from bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20180909.sql"} 
+[2021-03-01 14:14:55] development.INFO: Commit transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20180909.sql"} 
+[2021-03-01 14:14:55] development.INFO: Create applied folder {"applied":"20180909"} 
+[2021-03-01 14:14:55] development.INFO: Move files to bundle.  
+[2021-03-01 14:14:55] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20180909.sql"} 
+[2021-03-01 14:14:55] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20200909.sql"} 
+[2021-03-01 14:14:55] development.INFO: Run SQL from bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20200909.sql"} 
+[2021-03-01 14:14:55] development.INFO: Commit transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20200909.sql"} 
+[2021-03-01 14:14:55] development.INFO: Create applied folder {"applied":"20200909"} 
+[2021-03-01 14:14:55] development.INFO: Move files to bundle.  
+[2021-03-01 14:14:55] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20200909.sql"} 
+[2021-03-01 14:15:08] development.INFO: There is no files to work with.  
+[2021-03-01 15:56:20] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 15:56:20] development.INFO: Run SQL from bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 15:56:20] development.INFO: Commit transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 15:56:20] development.INFO: Create applied folder {"applied":"20170908"} 
+[2021-03-01 15:56:20] development.INFO: Move files to bundle.  
+[2021-03-01 15:56:20] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 15:56:20] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 15:56:20] development.INFO: Run SQL from bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 15:56:20] development.INFO: Commit transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 15:56:20] development.INFO: Create applied folder {"applied":"20171010"} 
+[2021-03-01 15:56:20] development.INFO: Move files to bundle.  
+[2021-03-01 15:56:20] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 15:56:20] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171011.sql"} 
+[2021-03-01 15:56:20] development.ERROR: Rollback transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171011.sql"} 
+[2021-03-01 15:56:20] development.ERROR: Error occurred whilst execute SQL from /Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171011.sql   
+[2021-03-01 15:56:20] development.ERROR: Error occurred whilst execute SQL from /Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171011.sql SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'error' already exists (SQL: -- Start of content /Users/dostrog/projects/preskok/sqled/assets/change/change_20171011_e.sql
+DROP TABLE IF EXISTS ERROR;
+CREATE TABLE ERROR(
+                              ID INT PRIMARY KEY     NOT NULL,
+                              NAME           TEXT    NOT NULL,
+                              AGE            INT     NOT NULL,
+                              ADDRESS        CHAR(50),
+                              SALARY         REAL
+      );
+
+CREATE TABLE ERROR(
+                                     ID INT PRIMARY KEY      NOT NULL,
+                                     DEPT           CHAR(50) NOT NULL,
+                                     EMP_ID         INT      NOT NULL
+      );
+-- End of content /Users/dostrog/projects/preskok/sqled/assets/change/change_20171011_e.sql
+)  
+[2021-03-01 15:57:00] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 15:57:00] development.INFO: Run SQL from bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 15:57:00] development.INFO: Commit transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 15:57:00] development.INFO: Create applied folder {"applied":"20170908"} 
+[2021-03-01 15:57:00] development.INFO: Move files to bundle.  
+[2021-03-01 15:57:00] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 15:57:00] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 15:57:00] development.INFO: Run SQL from bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 15:57:00] development.INFO: Commit transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 15:57:00] development.INFO: Create applied folder {"applied":"20171010"} 
+[2021-03-01 15:57:00] development.INFO: Move files to bundle.  
+[2021-03-01 15:57:00] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 15:57:00] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20180909.sql"} 
+[2021-03-01 15:57:00] development.INFO: Run SQL from bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20180909.sql"} 
+[2021-03-01 15:57:00] development.INFO: Commit transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20180909.sql"} 
+[2021-03-01 15:57:00] development.INFO: Create applied folder {"applied":"20180909"} 
+[2021-03-01 15:57:00] development.INFO: Move files to bundle.  
+[2021-03-01 15:57:00] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20180909.sql"} 
+[2021-03-01 15:57:00] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20200909.sql"} 
+[2021-03-01 15:57:00] development.INFO: Run SQL from bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20200909.sql"} 
+[2021-03-01 15:57:00] development.INFO: Commit transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20200909.sql"} 
+[2021-03-01 15:57:00] development.INFO: Create applied folder {"applied":"20200909"} 
+[2021-03-01 15:57:00] development.INFO: Move files to bundle.  
+[2021-03-01 15:57:00] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20200909.sql"} 
+[2021-03-01 15:58:28] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 15:58:28] development.INFO: Run SQL from bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 15:58:28] development.INFO: Commit transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 15:58:28] development.INFO: Create applied folder {"applied":"20170908"} 
+[2021-03-01 15:58:28] development.INFO: Move files to bundle.  
+[2021-03-01 15:58:28] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 15:58:28] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 15:58:28] development.INFO: Run SQL from bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 15:58:28] development.INFO: Commit transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 15:58:28] development.INFO: Create applied folder {"applied":"20171010"} 
+[2021-03-01 15:58:28] development.INFO: Move files to bundle.  
+[2021-03-01 15:58:28] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 15:58:28] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20180909.sql"} 
+[2021-03-01 15:58:28] development.INFO: Run SQL from bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20180909.sql"} 
+[2021-03-01 15:58:28] development.INFO: Commit transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20180909.sql"} 
+[2021-03-01 15:58:28] development.INFO: Create applied folder {"applied":"20180909"} 
+[2021-03-01 15:58:28] development.INFO: Move files to bundle.  
+[2021-03-01 15:58:28] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20180909.sql"} 
+[2021-03-01 15:58:28] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20200909.sql"} 
+[2021-03-01 15:58:28] development.INFO: Run SQL from bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20200909.sql"} 
+[2021-03-01 15:58:28] development.INFO: Commit transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20200909.sql"} 
+[2021-03-01 15:58:28] development.INFO: Create applied folder {"applied":"20200909"} 
+[2021-03-01 15:58:28] development.INFO: Move files to bundle.  
+[2021-03-01 15:58:28] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20200909.sql"} 
+[2021-03-01 16:09:30] development.INFO: There is no files to work with.  
+[2021-03-01 16:10:08] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 16:10:08] development.INFO: Run SQL from bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 16:10:08] development.INFO: Commit transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 16:10:08] development.INFO: Create applied folder {"applied":"20170908"} 
+[2021-03-01 16:10:08] development.INFO: Move files to bundle.  
+[2021-03-01 16:10:08] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20170908.sql"} 
+[2021-03-01 16:10:08] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 16:10:08] development.INFO: Run SQL from bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 16:10:08] development.INFO: Commit transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 16:10:08] development.INFO: Create applied folder {"applied":"20171010"} 
+[2021-03-01 16:10:08] development.INFO: Move files to bundle.  
+[2021-03-01 16:10:08] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20171010.sql"} 
+[2021-03-01 16:10:08] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20180909.sql"} 
+[2021-03-01 16:10:08] development.INFO: Run SQL from bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20180909.sql"} 
+[2021-03-01 16:10:08] development.INFO: Commit transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20180909.sql"} 
+[2021-03-01 16:10:08] development.INFO: Create applied folder {"applied":"20180909"} 
+[2021-03-01 16:10:08] development.INFO: Move files to bundle.  
+[2021-03-01 16:10:08] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20180909.sql"} 
+[2021-03-01 16:10:08] development.INFO: Start transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20200909.sql"} 
+[2021-03-01 16:10:08] development.INFO: Run SQL from bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20200909.sql"} 
+[2021-03-01 16:10:08] development.INFO: Commit transaction. {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20200909.sql"} 
+[2021-03-01 16:10:08] development.INFO: Create applied folder {"applied":"20200909"} 
+[2021-03-01 16:10:08] development.INFO: Move files to bundle.  
+[2021-03-01 16:10:08] development.INFO: Delete applied bundle {"bundle":"/Users/dostrog/projects/preskok/sqled/assets/change/change_bundle_20200909.sql"} 
