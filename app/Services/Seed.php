@@ -29,7 +29,7 @@ class Seed
         return $this->catalog->isEmpty();
     }
 
-    public function seed($bar = null): void
+    public function seed(bool $daily = false, $bar = null): void
     {
         if ($this->isCatalogEmpty()) {
             return;
@@ -40,28 +40,22 @@ class Seed
             $quantity += $group->count();
         });
 
-        if ($bar !== null) {
-            $bar->setMaxSteps($quantity);
-            $bar->start();
+        if ($daily) {
+            $this->seedByDay($quantity, $bar);
+
+            return;
         }
 
-        $this->catalog->each(function($group, $key){
-            $bundle = sprintf(self::BUNDLE_TEMPLATE, $key);
-            $this->makeBundle($bundle, $group->pluck('pathName'));
-            $this->seedFromFile($bundle);
-            $this->cleanBundle($bundle, (string)$key, $group->pluck('fileName'));
-        });
-
-        if ($bar !== null) {
-            $bar->finish();
-        }
+        $this->seedAll($quantity, $bar);
     }
 
-    private function makeBundle($bundle, $group): void
+    private function makeBundle($bundle, $group, $daily = true): void
     {
         $destName = $this->baseDir . $this->changeFolder . '/' . $bundle;
 
-        File::delete($destName);
+        if ($daily) {
+            File::delete($destName);
+        }
 
         $group->each(function($file) use ($destName) {
             $startComment = sprintf("-- Start of content %s%s", $file, PHP_EOL);
@@ -117,7 +111,7 @@ class Seed
         File::makeDirectory($appliedFolder, 0755, true);
 
         try {
-            Log::info('Move files to bundle.');
+            Log::info('Move files to applied.');
             $group->each(fn($file, $key) => File::move(
                 $this->baseDir . $this->changeFolder . '/' . $file,
                 $appliedFolder . '/' . $file
@@ -127,6 +121,66 @@ class Seed
             File::delete($bundlePath);
         } catch (Throwable $throwable) {
             throw new RuntimeException("Error occurred whilst cleaning up bundle {$bundle} : " . $throwable->getMessage());
+        }
+    }
+
+    private function seedByDay(int $quantity, $bar = null): void
+    {
+        if ($bar !== null) {
+            $bar->setMaxSteps($quantity);
+            $bar->start();
+        }
+
+        $this->catalog->each(function ($group, $key) use ($bar){
+            $bundle = sprintf(self::BUNDLE_TEMPLATE, $key);
+            $this->makeBundle($bundle, $group->pluck('pathName'));
+            $this->seedFromFile($bundle, $bar);
+            $this->cleanBundle($bundle, (string)$key, $group->pluck('fileName'));
+        });
+
+        if ($bar !== null) {
+            $bar->finish();
+        }
+    }
+
+    private function seedAll(int $quantity, $bar = null): void
+    {
+        if ($bar !== null) {
+            $bar->setMaxSteps($quantity);
+            $bar->start();
+        }
+
+        $bundle = sprintf(self::BUNDLE_TEMPLATE, 'all');
+        File::delete($this->baseDir . $this->changeFolder . '/' . $bundle);
+
+        $this->catalog->each(fn($group) => $this->makeBundle($bundle, $group->pluck('pathName'), false));
+
+        $this->seedFromFile($bundle, $bar);
+
+        $bundlePath = $this->baseDir . $this->changeFolder . '/' . $bundle;
+
+        try {
+            Log::info('Move files to applied.');
+
+            $this->catalog->each(function ($group, $key) {
+                $appliedFolder = $this->baseDir . $this->changeFolder . '/applied' . '/' . $key;
+                Log::info('Create applied folder', ['applied' => $key]);
+                File::makeDirectory($appliedFolder, 0755, true);
+                $group->each(function($file) use ($appliedFolder) {
+                    File::move($file['pathName'], $appliedFolder . '/' . $file['fileName']);
+                });
+            });
+
+            Log::info('Delete applied bundle', ['bundle' => $bundlePath]);
+            File::delete($bundlePath);
+        } catch (Throwable $throwable) {
+            throw new RuntimeException("Error occurred whilst cleaning up bundle {$bundle} : " . $throwable->getMessage());
+        }
+
+        File::delete($this->baseDir . $this->changeFolder . '/' . $bundle);
+
+        if ($bar !== null) {
+            $bar->finish();
         }
     }
 }

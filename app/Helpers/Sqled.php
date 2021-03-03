@@ -24,6 +24,7 @@ final class Sqled
     public static function makeCatalog(string $folder): Collection
     {
         $files = File::files($folder);
+
         $result = collect();
 
         collect($files)->each(function($file) use (&$result){
@@ -33,12 +34,19 @@ final class Sqled
                 return;
             }
 
+
             $record['date'] = Str::substr($fileName, 7, 8);
             $record['fileName'] = $fileName;
             $record['pathName'] = $file->getPathName();
+            $record['mTime'] = $file->getMTime();
             $record['withError'] = Sqled::isFileWithErrorSql($fileName);
             $result->push($record);
         });
+
+        $result->sortBy([
+            ['mTime', 'asc'],
+            ['fileName', 'asc'],
+        ]);
 
         return $result->groupBy('date')->sortKeys();
     }
