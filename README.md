@@ -1,6 +1,6 @@
 # Sqled
 
-Concatenate multiple SQL-files and apply with transaction. Bundled daily in advance.
+Concatenate multiple SQL-files and apply with transaction. Bundled daily in advance (optional).
 
 _This is a test assigment project (B1)_ [Description on Google Docs](https://docs.google.com/document/d/1dC0PrfmIbhP3EtG-3gwdto5vrv83m1DAmjSiNOSCAaQ/edit?usp=sharing)
 
@@ -72,7 +72,7 @@ DB_CONNECTION=sqlite
     ```shell
     $ php sqled seed
 
-    Execute SQL scripts from files. Daily bundled in advance.
+    Execute SQL scripts from files.
 
     11/11 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
     ```
@@ -102,6 +102,9 @@ DB_CONNECTION=sqlite
     │   └── sqled-2021-03-01.log
     └── sqled
     ```
+
+- with using `--daily` option bundles will be created and applied as one-for-day.
+
 ## Using
 
 Project is written on 100% PHP and may be started from within project folder or from PHAR archive as a standalone application. 

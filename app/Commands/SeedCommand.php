@@ -16,6 +16,7 @@ class SeedCommand extends Command
      * @var string
      */
     protected $signature = 'seed
+    {--daily : Bundles will be created by day}
     {--baseDir= : Base working directory, "./assets" if not specified}';
 
     /**
@@ -32,24 +33,29 @@ class SeedCommand extends Command
      */
     public function handle()
     {
+        $descrAdd =  $this->option('daily') ? ' Daily bundled in advance.' : '';
+
         $this->newline();
-        $this->info($this->description . ' Daily bundled in advance.');
+        $this->info($this->description . $descrAdd);
         $this->newline();
 
         try {
             $seeder = new Seed($this->option('baseDir'));
 
             if ($seeder->isCatalogEmpty()) {
+
                 $info = "There is no files to work with.";
                 Log::info($info);
                 $this->info($info);
                 $this->newline();
+
                 return 2;
             }
 
             $bar = $this->output->createProgressBar();
 
-            $seeder->seed($bar);
+            $seeder->seed($this->option('daily'), $bar);
+
         } catch (Throwable $throwable) {
             $message = $throwable->getMessage();
             Log::error($message);
