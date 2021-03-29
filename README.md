@@ -2,8 +2,6 @@
 
 Concatenate multiple SQL-files and apply with transaction. Bundled daily in advance (optional).
 
-_This is a test assigment project (B1)_ [Description on Google Docs](https://docs.google.com/document/d/1dC0PrfmIbhP3EtG-3gwdto5vrv83m1DAmjSiNOSCAaQ/edit?usp=sharing)
-
 Used technologies:
 
 - [PHP 7.4](https://www.php.net)
